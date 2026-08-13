@@ -33,9 +33,9 @@
 
     <p id="answer">Click the button. OR ELSE</p>
 
-    <button class="stonecutters" onclick="newAnswer()">Is Stonecutters a cool song?</button>
+    <button class="stonecutters" onclick="newAnswer('stonecutters')">Is Stonecutters a cool song?</button>
     
-    <button class="sleepwalking" onclick="newAnswer()">Is Sleepwalking a cool song?</button>    
+    <button class="sleepwalking" onclick="newAnswer('sleepwalking')">Is Sleepwalking a cool song?</button>    
 
     <script>
         const answers = [
@@ -46,12 +46,20 @@
     
         ];
 
-        function newAnswer() {
+        function newAnswer(songName) {
+            document.getElementById("answer").textContext = 
+                "You clicked " + songName;
+        }
+        /* 
+        OLD VERSION: 
+        
+        function newAnswer(songName) {
             const randomNumber = Math.floor(Math.random() * answers.length);
 
             document.getElementById("answer").textContent =
                 answers[randomNumber];
         }
+        */
     </script>
 
 </body>
