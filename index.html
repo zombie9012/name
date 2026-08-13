@@ -31,27 +31,26 @@
 
     <h1>Cool song?</h1>
 
-    <p id="answer">Click the button. OR ELSE</p>
+    <p id="song">Click the button. OR ELSE</p>
 
-    <button class="stonecutters" onclick="newAnswer()">Is Stonecutters a cool song?</button>
+    <button class="stonecutters" onclick="newSong()">Is Stonecutters a cool song?</button>
     
-    <button class="sleepwalking" onclick="newAnswer()">Is Sleepwalking a cool song?</button>    
+    <button class="sleepwalking" onclick="newSong()">Is Sleepwalking a cool song?</button>    
 
     <script>
-        const answers = [
+        const songs = [
             "Yes.",
             "Hell yes.",
             "Fuck yes.",
             "Hell yeahahhh.",
     
         ];
-    let answerNumber = 0
-function newAnswer() {
-    document.getElementById("answer").textContent =
-        answers[answerNumber];
 
-    answerNumber++;
-}
+        function newSong() {
+            const randomNumber = Math.floor(Math.random() * songs.length);
+
+            document.getElementById("song").textContent =
+                songs[randomNumber];
         }
     </script>
 
